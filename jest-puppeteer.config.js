@@ -1,7 +1,7 @@
 module.exports = {
     launch: {
         dumpio: true,
-        headless: false,
+        headless: 'true' === process.env.ci,
         args: ['--disable-infobars'],
     },
     browserContext: 'default'
