@@ -1,5 +1,5 @@
 {
-  "name": "page-load-test",
+  "name": "@jeff-tian/page-load-test",
   "version": "0.0.0-development",
   "description": "",
   "main": "index.js",
@@ -38,5 +38,8 @@
   "bugs": {
     "url": "https://github.com/unicareer-tech/page-load-test/issues"
   },
-  "homepage": "https://github.com/unicareer-tech/page-load-test#readme"
+  "homepage": "https://github.com/unicareer-tech/page-load-test#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }

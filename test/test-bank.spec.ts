@@ -5,12 +5,12 @@ describe('test-bank', () => {
         await page.goto('https://www.unicareer.com/test-bank/', {waitUntil: 'networkidle0'})
     })
 
-    it('hello', async () => {
+    it('login', async () => {
         async function testing() {
             await page.tap('input[type=number]')
             await page.keyboard.type('17717373367')
             await page.tap('input[type=password')
-            await page.keyboard.type('UniCareer@2018')
+            await page.keyboard.type(process.env.UniCareerPassword)
             await page.tap('button[type=submit]')
             await page.waitFor('div.list')
             await sleep(5);
