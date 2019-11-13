@@ -25,7 +25,7 @@
     "png-file-stream": "latest"
   },
   "scripts": {
-    "test": "jest --runInBand",
+    "test": "jest --runInBand --detectOpenHandles",
     "semantic-release": "semantic-release"
   },
   "repository": {

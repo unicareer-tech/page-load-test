@@ -8,12 +8,12 @@ export const sleep = (seconds: number) =>
 
 export default async function screenRecording(
     page,
-    width,
-    height,
+    width = 1280,
+    height = 800,
     frames = 15
 ) {
     console.log('start recording...')
-    await sleep(5)
+    await sleep(1)
     process.stdout.write('taking screenshots: .')
 
     for (let i = 1; i < frames; ++i) {
