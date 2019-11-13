@@ -30,7 +30,7 @@ export default async function screenRecording(
     const encoder = new GIFEncoder(width, height)
 
     await pngFileStream(path.resolve(__dirname, 'T*png'))
-        .pipe(encoder.createWriteStream({repeat: 0, deploy: 200, quality: 20}))
+        .pipe(encoder.createWriteStream({repeat: 0, deploy: 200, quality: 80}))
         .pipe(fs.createWriteStream(path.resolve(__dirname, 'screenshot.gif')))
 
     console.log('gif generated.')

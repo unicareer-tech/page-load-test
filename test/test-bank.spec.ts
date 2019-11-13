@@ -18,7 +18,7 @@ describe('test-bank', () => {
 
         await Promise.all([
             testing(),
-            'true' === process.env.ci ? () => screenRecording(page, page.viewport().width, page.viewport().height) : () => Promise.resolve('hello')
+            screenRecording(page, page.viewport().width, page.viewport().height)
         ]);
 
         console.log('test done.')
