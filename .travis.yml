@@ -10,5 +10,8 @@ cache:
 env:
   ci: true
 
+before_install:
+  - npm i
+
 script:
   - npm test
