@@ -12,7 +12,10 @@ describe('test-bank', () => {
             headless: 'true' === process.env.ci,
             args: [`--window-size=${width},${height}`]
         });
+
         page = await browser.newPage()
+        await page.setViewport({width, height})
+        console.log('set view port')
 
         afterAll(browser.close)
     });
@@ -23,7 +26,11 @@ describe('test-bank', () => {
             const client = await page.target().createCDPSession()
         }
 
-        testing()
-        screenRecording(page, width, height)
+        await Promise.all([
+            testing(),
+            screenRecording(page, width, height)
+        ])
+
+        console.log('test done.')
     })
 })
