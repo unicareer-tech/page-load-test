@@ -20,7 +20,9 @@
     "puppeteer": "^2.0.0",
     "puppeteer-core": "^2.0.0",
     "ts-jest": "^24.1.0",
-    "semantic-release": "^15.13.30"
+    "semantic-release": "^15.13.30",
+    "gifencoder": "latest",
+    "png-file-stream": "latest"
   },
   "scripts": {
     "test": "jest --runInBand",
